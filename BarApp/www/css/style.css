@@ -1,8 +1,8 @@
 /* Empty. Add your own CSS if you like */
 .shell
 {
-  width: 350px;
-  height: 500px;
+  width: 70%;
+  height: 450px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -14,17 +14,16 @@
   margin-right: auto;
 }
 
-.polaroid img {
+.shell > .polaroid img {
+
+  width: 225px;
+  height: 350px;
+
   border: 10px solid #fff;
   border-bottom: 45px solid #fff;
   -webkit-box-shadow: 3px 3px 3px #777;
   -moz-box-shadow: 3px 3px 3px #777;
   box-shadow: 3px 3px 3px #777;
-}
-
-.polaroid img {
-  width: 250px;
-  height: 400px;
 }
 
 .polaroid p {
@@ -34,4 +33,8 @@
   bottom: 0px;
   font: 400 18px/1 'Kaushan Script', cursive;
   color: #888;
+}
+
+#imgincard {
+  height: 300px;
 }
