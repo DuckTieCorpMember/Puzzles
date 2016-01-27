@@ -1,5 +1,5 @@
 /* Empty. Add your own CSS if you like */
-.shell
+/*.shell
 {
   width: 70%;
   height: 450px;
@@ -37,4 +37,9 @@
 
 #imgincard {
   height: 300px;
+}*/
+
+.slides {
+  margin-top: 10%;
+  margin-left: 11%;
 }
