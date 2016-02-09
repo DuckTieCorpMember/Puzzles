@@ -71,3 +71,9 @@
   font-family: 'Pacifico', cursive;
   font-size: 150%;
 }
+
+#icon
+{
+  max-height: 100px;
+  max-width: 100px;
+}

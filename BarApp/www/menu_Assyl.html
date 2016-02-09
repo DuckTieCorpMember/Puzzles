@@ -45,10 +45,26 @@
           <!--<div class="menu">Settings</div>-->
           <!--<div class="menu">Contacts</div>-->
           <!--<div class="menu">About</div>-->
-          <div class="menu-item-1 col-xs-6 " ng-click="menuOpen()" >MENU</div>
-          <div class=" menu-item-2 col-xs-6 ">SETTING</div>
-          <div class=" menu-item-1 col-xs-6">CONTACTS</div>
-          <div class="menu-item-2 col-xs-6 ">ABOUT</div>
+          <div id="menu" class="menu-item-1 col-xs-6 " ng-click="menuOpen(); changeCont = !changeCont" >MENU</div>
+          <div id="setting" class=" menu-item-2 col-xs-6 ">SETTING</div>
+          <div id = "contacts" ng-show="!changeCont" class=" menu-item-1 col-xs-6" ng-click="hideMenu(); contactsInv = !contactsInv">CONTACTS</div>
+          <div ng-show="changeCont" class=" menu-item-1 col-xs-6">EXIT</div>
+          <div id="about" class="menu-item-2 col-xs-6 ">ABOUT</div>
+
+          <ul class="media-list" ng-show="contactsInv">
+            <li class="media" ng-repeat="c in contacts">
+              <div class="media-left">
+                <a href="#">
+                  <img id="icon" class="media-object thumbnail" src="{{c.img_src}}"
+                       alt={{c.img_alt}}>
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">{{c.name}}</h4>
+                {{c.desc}}
+              </div>
+            </li>
+          </ul>
       </div>
     </ion-nav-view>
   </ion-content>
