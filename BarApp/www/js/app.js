@@ -36,7 +36,7 @@ app.config (function ($stateProvider, $urlRouterProvider) {
         templateUrl: 'views/slides.html'
       }
     }
-  })
+  });
 
   $stateProvider.state ('theone', {
       url: '/theone',
@@ -49,6 +49,19 @@ app.config (function ($stateProvider, $urlRouterProvider) {
         }
       }
 
-    })
+  });
 
+  $stateProvider.state('menu', {
+    url: '/menu',
+    views: {
+      content: {
+        templateUrl: 'views/menu_Assyl.html'
+      }
+    }
+  });
+
+  $stateProvider.state('menu_open', {
+    url: '/menu_open',
+    templateUrl: 'views/menu_open_Assyl.html'
+  });
 });
