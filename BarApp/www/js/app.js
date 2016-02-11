@@ -62,6 +62,10 @@ app.config (function ($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state('menu_open', {
     url: '/menu_open',
-    templateUrl: 'views/menu_open_Assyl.html'
+    views: {
+      content: {
+        templateUrl: 'views/menu_open_Assyl.html'
+      }
+    }
   });
 });

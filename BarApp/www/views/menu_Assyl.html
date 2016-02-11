@@ -41,14 +41,24 @@
   <!--<ion-content>-->
     <!--<ion-nav-view name="content" ng-controller="menuController">-->
       <div class="container googleFont">
+        <br/>
           <!--<div class="menu">Menu</div>-->
           <!--<div class="menu">Settings</div>-->
           <!--<div class="menu">Contacts</div>-->
           <!--<div class="menu">About</div>-->
-          <div id="menu" class="menu-item-1 col-xs-6 "><a href="#/menu">MENU</a></div>
-          <div id="setting" class=" menu-item-2 col-xs-6 ">SETTING</div>
-          <div id = "contacts"  class=" menu-item-1 col-xs-6">CONTACTS</div>
-          <div id="about" class="menu-item-2 col-xs-6 ">ABOUT</div>
+          <div class="row">
+            <!--<div class="menu-item-1 col "><a href="#/menu_open">MENU</a></div>-->
+            <!--<div class=" menu-item-2 col "><a href="#/slides">PHOTOS</a></div>-->
+            <a href="#/menu_open" class="col menu-item-1"><button class="button button-full button-positive">MENU</button></a>
+            <button class="button button-positive col menu-item-1"><a href="#/slides">PHOTOS</a></button>
+
+          </div>
+          <div class="row">
+            <!--<div class="menu-item-1 col ">CONTACTS</div>-->
+            <!--<div class=" menu-item-2 col ">ABOUT</div>-->
+            <button class="button button-positive col menu-item-1">CONTACTS</button>
+            <button class="button button-positive col menu-item-1">ABOUT</button>
+           </div>
 
           <!--<ul class="media-list" ng-show="contactsInv">-->
             <!--<li class="media" ng-repeat="c in contacts">-->
