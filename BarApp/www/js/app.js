@@ -68,4 +68,13 @@ app.config (function ($stateProvider, $urlRouterProvider) {
       }
     }
   });
+
+  $stateProvider.state('contacts', {
+    url: '/contacts',
+    views: {
+      content: {
+        templateUrl: 'views/contacts.html'
+      }
+    }
+  });
 });

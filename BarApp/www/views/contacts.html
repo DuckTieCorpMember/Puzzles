@@ -1,0 +1,19 @@
+<div class="container googleFont list" >
+
+  <a ng-repeat="c in contacts" href="#" class="item
+      item-thumbnail-left" ng-click="more = !more">
+
+    <img ng-src={{c.img_src}} alt={{c.img_alt}}/>
+    <h1>{{c.name}}</h1>
+    <!--<p>{{c.desc}}</p>-->
+
+    <div class="card" ng-show="more">
+      <div class="item item-text-wrap description">
+        {{c.desc}}
+      </div>
+    </div>
+
+  </a>
+
+</div>
+

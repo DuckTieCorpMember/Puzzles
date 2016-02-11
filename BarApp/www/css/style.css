@@ -38,52 +38,37 @@
 #imgincard {
   height: 300px;
 }*/
+a
+{
+  text-decoration: none;
+}
 
 .slides {
   margin-top: 10%;
   margin-left: 11%;
 }
+
 .menu-item-1 button
 {
   height: 100%;
+  /*width: 100%;*/
+  font-size: 150%;
 }
-/*ASSYLBEK ADDED*/
+
 .menu-item-1
 {
-  /*background-color: rgba(0, 236, 255, 0.50);*/
-  /*width: 100%;*/
-  /*display: inline-block;*/
-  height: 175px;
-  /*border: solid #000000 1px;*/
-  /*text-align: center;*/
-  /*vertical-align: middle;*/
-  /*float: none;*/
+  height: 150px;
   font-size: 150%;
   margin: 5px;
-  /*line-height: 150px;*/
 }
-/*.menu-item-2*/
-/*{*/
-  /*background-color: rgba(255, 0, 18, 0.50);*/
-  /*width: 100%;*/
-  /*display: inline-block;*/
-  /*height: 175px;*/
-  /*border: solid #000000 1px;*/
-  /*text-align: center;*/
-  /*vertical-align: middle;*/
-  /*float: none;*/
-  /*margin: 5px;*/
-  /*line-height: 150px;*/
-/*}*/
-
-/*.googleFont*/
-/*{*/
-  /*font-family: 'Pacifico', bold;*/
-  /*font-size: 150%;*/
-/*}*/
 
 #icon
 {
   max-height: 100px;
   max-width: 100px;
+}
+
+.description
+{
+  font-size: 150%;
 }
