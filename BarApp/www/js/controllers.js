@@ -1,4 +1,4 @@
-app.controller("myCtrl", function($scope) {
+app.controller("myCtrl", ['$scope', function($scope) {
   $scope.contacts = [
     {
       name: "Tony Stark",
@@ -25,4 +25,8 @@ app.controller("myCtrl", function($scope) {
       desc: "I will try not to SMASH you."
     }
   ];
-});
+  $scope.AddToContacts = function()
+  {
+    console.log("Bo@");
+  }
+}]);

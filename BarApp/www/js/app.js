@@ -1,4 +1,3 @@
-// Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
@@ -74,6 +73,15 @@ app.config (function ($stateProvider, $urlRouterProvider) {
     views: {
       content: {
         templateUrl: 'views/contacts.html'
+      }
+    }
+  });
+
+  $stateProvider.state('regitser-form', {
+    url: '/register-form',
+    views: {
+      content: {
+        templateUrl: 'views/register-form.html'
       }
     }
   });
