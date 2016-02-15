@@ -1,4 +1,4 @@
-app.controller("myCtrl", ['$scope', function($scope) {
+app.controller("myCtrl", ['$scope', function($scope, $route) {
   $scope.contacts = [
     {
       name: "Tony Stark",
@@ -25,8 +25,15 @@ app.controller("myCtrl", ['$scope', function($scope) {
       desc: "I will try not to SMASH you."
     }
   ];
-  $scope.AddToContacts = function()
+  $scope.AddToContacts = function(name, comment, src)
   {
-    console.log("Bo@");
-  }
+    console.log(name + " " + comment + " " + src );
+    $scope.contacts.push({
+      name: name,
+      img_src: src,
+      img_alt: name,
+      desc: comment
+    });
+    console.log($scope.contacts.length);
+  };
 }]);

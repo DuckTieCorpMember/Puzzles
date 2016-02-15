@@ -1,9 +1,9 @@
 <div class="list">
   <label class="item item-input">
-    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Name" ng-model="name">
   </label>
   <label class="item item-input">
-    <textarea placeholder="Comments"></textarea>
+    <textarea placeholder="Comments" ng-model="comment"></textarea>
   </label>
   <div class="row">
     <div class="col-25"></div>
@@ -13,14 +13,15 @@
 
   <div class="row"  ng-show="showForm" ng-controller="myCtrl">
     <div class="col-25"></div>
-    <div>
+    <div class="col-50">
       <div class="list">
         <br/>
         <label class="item item-input item-floating-label">
-          <span class="input-label"  ng-click="AddToContacts()">Image Src</span>
-          <input type="text" placeholder="Image Src">
+          <span class="input-label">Image Src</span>
+          <input type="text" placeholder="Image Src" ng-model="src">
         </label>
       </div>
+      <a href="#/contacts"><button class="button button-full button-positive" ng-click="AddToContacts(name, comment, src)">DONE</button></a>
     </div>
     <div class="col-25"></div>
   </div>
