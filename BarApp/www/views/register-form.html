@@ -7,23 +7,25 @@
   </label>
   <div class="row">
     <div class="col-25"></div>
-    <button class="button button-full button-assertive" ng-click="showForm = !showForm">Upload Photo</button>
+    <!--<button class="button button-full button-assertive" ng-click="showForm = !showForm">Upload Photo</button>-->
+    <button class="button button-full button-assertive" ng-click="takePhoto()">Take Photo</button>
+    <img ng-show="imgURI !=== undefined" ng-src="{{imgURI}}" style="text-align: center"/>
     <div class="col-25"></div>
   </div>
 
-  <div class="row"  ng-show="showForm">
-    <div class="col-25"></div>
-    <div class="col-50">
-      <div class="list">
-        <br/>
-        <label class="item item-input item-floating-label">
-          <span class="input-label">Image Src</span>
-          <input type="text" placeholder="Image Src" ng-model="src">
-        </label>
-      </div>
-      <a href="#/contacts"><button class="button button-full button-positive" ng-click="AddToContacts(name, comment, src)">DONE</button></a>
-    </div>
-    <div class="col-25"></div>
-  </div>
+  <!--<div class="row"  ng-show="showForm">-->
+    <!--<div class="col-25"></div>-->
+    <!--<div class="col-50">-->
+      <!--<div class="list">-->
+        <!--<br/>-->
+        <!--<label class="item item-input item-floating-label">-->
+          <!--<span class="input-label">Image Src</span>-->
+          <!--<input type="text" placeholder="Image Src" ng-model="src">-->
+        <!--</label>-->
+      <!--</div>-->
+      <!--<a href="#/contacts"><button class="button button-full button-positive" ng-click="AddToContacts(name, comment, src)">DONE</button></a>-->
+    <!--</div>-->
+    <!--<div class="col-25"></div>-->
+  <!--</div>-->
 
 </div>
