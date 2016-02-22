@@ -44,19 +44,18 @@ app.run(function($localstorage)
 //localStorage.setItem('savedContacts', savedContacts);
 
 //app.controller("myCtrl", ['$scope', '$localstorage', '$cordovaCamera', function($scope, $localstorage, $cordovaCamera) {
-app.controller("myCtrl", ['$scope', '$localstorage', function($scope, $localstorage) {
+app.controller("myCtrl", '$scope', '$localstorage', function($scope, $localstorage, Camera) {
 
 
   var load = 0;
   //$scope.contacts = savedContacts;
   //window.localStorage['savedContacts'] = JSON.stringify(savedContacts);
-  if( load == 0 ) {
+  if (load == 0) {
     $scope.contacts = $localstorage.getObject('savedContacts');
-    load ++;
+    load++;
   }
 
-  $scope.AddToContacts = function(name, comment, src)
-  {
+  $scope.AddToContacts = function (name, comment, src) {
     //console.log(name + " " + comment + " " + src );
     savedContacts.push({
       name: name,
@@ -74,23 +73,24 @@ app.controller("myCtrl", ['$scope', '$localstorage', function($scope, $localstor
     console.log(savedContacts.length);
   };
 
-  //$scope.takePhoto = function () {
-  //  var options = {
-  //    quality: 75,
-  //    destinationType: Camera.DestinationType.DATA_URL,
-  //    sourceType: Camera.PictureSourceType.CAMERA,
-  //    allowEdit: true,
-  //    encodingType: Camera.EncodingType.JPEG,
-  //    targetWidth: 300,
-  //    targetHeight: 300,
-  //    popoverOptions: CameraPopoverOptions,
-  //    saveToPhotoAlbum: false
-  //  };
+  //$scope.TakePicture = function () {
+  //  navigator.camera.getPicture(function (imageURI) {
   //
-  //  $cordovaCamera.getPicture(options).then(function (imageData) {
-  //    $scope.imgURI = "data:image/jpeg;base64," + imageData;
+  //    // imageURI is the URL of the image that we can use for
+  //    // an <img> element or backgroundImage.
+  //
   //  }, function (err) {
-  //    // An error occured. Show a message to the user
-  //  });
-  //}
-}]);
+  //
+  //    // Ruh-roh, something bad happened
+  //
+  //  }, cameraOptions);
+  //};
+  //
+  //$scope.getPhoto = function () {
+  //  Camera.getPicture().then(function (imageURI) {
+  //    console.log(imageURI);
+  //  }, function (err) {
+  //    console.err(err);
+  //  })
+  //};
+});
