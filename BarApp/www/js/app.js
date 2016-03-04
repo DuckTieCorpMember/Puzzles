@@ -4,34 +4,34 @@
 //var app = angular.module('starter', ['ionic', 'ngCordova']);
 var app = angular.module('starter', ['ionic']);
 
-app.factory('$localstorage', 'Camera', ['$window', '$q', function($window, $q) {
-  return {
-    set: function (key, value) {
-      $window.localStorage[key] = value;
-    },
-    get: function (key, defaultValue) {
-      return $window.localStorage[key] || defaultValue;
-    },
-    setObject: function (key, value) {
-      $window.localStorage[key] = JSON.stringify(value);
-    },
-    getObject: function (key) {
-      return JSON.parse($window.localStorage[key] || '{}');
-    }/*,*/
-    //getPicture: function (options) {
-    //  var q = $q.defer();
-    //
-    //  navigator.camera.getPicture(function (result) {
-    //    // Do any magic you need
-    //    q.resolve(result);
-    //  }, function (err) {
-    //    q.reject(err);
-    //  }, options);
-    //
-    //  return q.promise;
-    //}
-  };
-}]);
+//app.factory('$localstorage', ['$window', function($window) {
+//  return {
+//    set: function (key, value) {
+//      $window.localStorage[key] = value;
+//    },
+//    get: function (key, defaultValue) {
+//      return $window.localStorage[key] || defaultValue;
+//    },
+//    setObject: function (key, value) {
+//      $window.localStorage[key] = JSON.stringify(value);
+//    },
+//    getObject: function (key) {
+//      return JSON.parse($window.localStorage[key] || '{}');
+//    }/*,*/
+//    //getPicture: function (options) {
+//    //  var q = $q.defer();
+//    //
+//    //  navigator.camera.getPicture(function (result) {
+//    //    // Do any magic you need
+//    //    q.resolve(result);
+//    //  }, function (err) {
+//    //    q.reject(err);
+//    //  }, options);
+//    //
+//    //  return q.promise;
+//    //}
+//  };
+//}]);
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -51,7 +51,7 @@ app.run(function($ionicPlatform) {
   })
 });
 
-app.config (function ($stateProvider, $urlRouterProvider, $compileProvider) {
+app.config (function ($stateProvider, $urlRouterProvider) {
 
   //$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
 
